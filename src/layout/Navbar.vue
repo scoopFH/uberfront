@@ -30,7 +30,11 @@
       </v-sheet>
     </v-card>
 
-    <v-footer app> </v-footer>
+    <v-footer app padless color="primary">
+      <v-col class="text-center white--text" cols="12">
+        {{ new Date().getFullYear() }} — <strong>Ubereat</strong>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
