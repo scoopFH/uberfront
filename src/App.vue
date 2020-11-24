@@ -4,10 +4,14 @@
 
 <script>
 import Navbar from "@/layout/Navbar.vue";
+import Reduction from '@/components/reduction.vue';
 export default {
   name: "App",
 
-  components: { Navbar },
+  components: { 
+    Navbar, 
+    Reduction,
+   },
 
   data: () => ({}),
 };
