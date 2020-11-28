@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import DishPresentationCard from "@/components/dishPresentationCard.vue";
+import DishPresentationCard from "@/components/restaurantPresentationCard.vue";
 export default {
   name: "DishesPresentation",
   components: { DishPresentationCard },
