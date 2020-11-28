@@ -109,7 +109,7 @@
 import RestaurantPresentationCard from "@/components/restaurantPresentationCard.vue";
 import RestaurantService from "@/store/restaurant.js";
 export default {
-  name: "RestaurantPresentation",
+  name: "RestaurantPresentationList",
   store: { RestaurantService },
   components: { RestaurantPresentationCard },
   data() {
