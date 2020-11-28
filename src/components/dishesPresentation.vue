@@ -123,7 +123,7 @@ export default {
           name: "Burger King",
           adress: "8 rue du Maraudeur",
           city: "Lyon",
-          picture: "https://img.argentdubeurre.com/content/7656/illustration/burger-king-2-euros-4.jpg",
+          preview: "https://img.argentdubeurre.com/content/7656/illustration/burger-king-2-euros-4.jpg",
         },
       ],
     };

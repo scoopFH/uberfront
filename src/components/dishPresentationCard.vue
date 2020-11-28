@@ -1,11 +1,11 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <v-img
-      :src="dish.picture"
+      :src="dish.preview"
       height="200px"
     ></v-img>
 
-    <v-card-title>{{ dish.name }} </v-card-title>
+    <v-card-title> {{ dish.name }} </v-card-title>
 
     <v-card-subtitle> {{ dish.adress }} à {{ dish.city }} </v-card-subtitle>
 

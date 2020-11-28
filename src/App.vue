@@ -1,15 +1,18 @@
 <template>
-  <Navbar />
+  <Main />
 </template>
 
 <script>
-import Navbar from "@/layout/Navbar.vue";
+import Main from "@/layout/Main.vue";
 import Reduction from '@/components/reduction.vue';
+
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:8080/';
 export default {
   name: "App",
 
   components: { 
-    Navbar, 
+    Main, 
     Reduction,
    },
 

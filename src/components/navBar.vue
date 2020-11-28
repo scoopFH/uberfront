@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <v-app-bar
       app
       absolute
@@ -82,62 +82,51 @@
         <v-btn width="85%" large color="indigo" dark> Eat </v-btn>
       </div>
     </v-navigation-drawer>
-
-    <v-main>
-      <v-container fluid class="pa-0">
-        <router-view></router-view>
-      </v-container>
-    </v-main>
-
-    <v-footer app padless color="primary">
-      <v-col class="text-center white--text" cols="12">
-        {{ new Date().getFullYear() }} — <strong>Ubereat</strong>
-      </v-col>
-    </v-footer>
-  </v-app>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Navbar",
-
+  watch: {},
+  name: "Reduction",
   components: {},
-
-  data: () => ({
-    drawer: false,
-    drawerRight: false,
-    items: [
-      { title: "connect", icon: "mdi-account" },
-      { title: "register", icon: "mdi-account-plus" },
-      { title: "create a restorer account", icon: "mdi-chef-hat" },
-    ],
-    order: [
-      {
-        name: "burger vegan",
-        restaurant: "Burger King",
-        number: "2",
-        price: "4",
-      },
-      {
-        name: "burger texs",
-        restaurant: "Burger King",
-        number: "8",
-        price: "2",
-      },
-      {
-        name: "burger vegan",
-        restaurant: "Burger King",
-        number: "2",
-        price: "4",
-      },
-      {
-        name: "burger texs",
-        restaurant: "Burger King",
-        number: "8",
-        price: "2",
-      },
-    ],
-    right: null,
-  }),
+  data() {
+    return {
+      drawer: false,
+      drawerRight: false,
+      items: [
+        { title: "connect", icon: "mdi-account" },
+        { title: "register", icon: "mdi-account-plus" },
+        { title: "create a restorer account", icon: "mdi-chef-hat" },
+      ],
+      right: null,
+      order: [
+        {
+          name: "burger vegan",
+          restaurant: "Burger King",
+          number: "2",
+          price: "4",
+        },
+        {
+          name: "burger texs",
+          restaurant: "Burger King",
+          number: "8",
+          price: "2",
+        },
+        {
+          name: "burger vegan",
+          restaurant: "Burger King",
+          number: "2",
+          price: "4",
+        },
+        {
+          name: "burger texs",
+          restaurant: "Burger King",
+          number: "8",
+          price: "2",
+        },
+      ],
+    };
+  },
 };
 </script>
