@@ -54,7 +54,7 @@
           md="4"
           lg="3"
         >
-          <DishPresentationCard :dish="item" />
+          <restaurantPresentationCard :dish="item" />
         </v-col>
       </v-row>
     </template>
@@ -104,10 +104,10 @@
 </template>
 
 <script>
-import DishPresentationCard from "@/components/restaurantPresentationCard.vue";
+import restaurantPresentationCard from "@/components/restaurantPresentationCard.vue";
 export default {
-  name: "DishesPresentation",
-  components: { DishPresentationCard },
+  name: "restaurantPresentation",
+  components: { restaurantPresentationCard },
   data() {
     return {
       itemsPerPageArray: [4, 8, 12],
