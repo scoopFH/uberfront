@@ -1,7 +1,7 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <v-img
-      :src="dish.preview"
+      :src="dish.picture"
       height="200px"
     ></v-img>
 
@@ -20,7 +20,9 @@
 
 <script>
 export default {
-  name: "DishPresentationCard",
+  watch: {
+  },
+  name: "RestaurantPresentationCard",
   components: {},
   props:['dish'],
   data() {

@@ -1,6 +1,7 @@
 <template>
-  <v-data-iterator
-    :items="items"
+  <div>
+    <v-data-iterator
+    :items="restaurants"
     :items-per-page.sync="itemsPerPage"
     :page="page"
     :search="search"
@@ -44,17 +45,17 @@
       </v-toolbar>
     </template>
 
-    <template v-slot:default="props">
+    <template>
       <v-row>
         <v-col
-          v-for="item in props.items"
+          v-for="item in restaurants"
           :key="item.name"
           cols="12"
           sm="6"
           md="4"
           lg="3"
         >
-          <DishPresentationCard :dish="item" />
+          <RestaurantPresentationCard :dish="item" />
         </v-col>
       </v-row>
     </template>
@@ -101,13 +102,16 @@
       </v-row>
     </template>
   </v-data-iterator>
+  </div>
 </template>
 
 <script>
-import DishPresentationCard from "@/components/dishPresentationCard.vue";
+import RestaurantPresentationCard from "@/components/restaurantPresentationCard.vue";
+import RestaurantService from "@/store/restaurant.js";
 export default {
-  name: "DishesPresentation",
-  components: { DishPresentationCard },
+  name: "RestaurantPresentation",
+  store: { RestaurantService },
+  components: { RestaurantPresentationCard },
   data() {
     return {
       itemsPerPageArray: [4, 8, 12],
@@ -118,15 +122,11 @@ export default {
       itemsPerPage: 4,
       sortBy: "name",
       keys: ["Name"],
-      items: [
-        {
-          name: "Burger King",
-          adress: "8 rue du Maraudeur",
-          city: "Lyon",
-          preview: "https://img.argentdubeurre.com/content/7656/illustration/burger-king-2-euros-4.jpg",
-        },
-      ],
+      items: [],
     };
+  },
+  mounted: async function () {
+    RestaurantService.commit("getAllRestaurants");
   },
   computed: {
     numberOfPages() {
@@ -134,6 +134,9 @@ export default {
     },
     filteredKeys() {
       return this.keys.filter((key) => key !== "Name");
+    },
+    restaurants() {
+      return RestaurantService.state.restaurants;
     },
   },
   methods: {
