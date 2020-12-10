@@ -60,7 +60,7 @@
       <v-card
         class="mt-6 mb-6 ml-7"
         max-width="344"
-        v-for="dish in order"
+        v-for="dish in organizingProducts(order)"
         :key="dish"
       >
         <v-card-text>
@@ -87,6 +87,30 @@
 
 <script>
 export default {
+  methods: {
+    organizingProducts: function (products) {
+      var organizeProducts = [];
+      var founded = false;
+
+      for (let i = 0; i < products.length; i++) {
+        founded = false;
+        for (let j = 0; j < organizeProducts.length; j++) {
+          if (products[i].name == organizeProducts[j].name) {
+            organizeProducts[j].number++;
+            founded = true;
+          }
+        }
+        if (founded == false) {
+          Object.defineProperty(products[i], "number", {
+            value: 1,
+            writable: true,
+          });
+          organizeProducts.push(products[i]);
+        }
+      }
+      return organizeProducts;
+    },
+  },
   watch: {},
   name: "Reduction",
   components: {},

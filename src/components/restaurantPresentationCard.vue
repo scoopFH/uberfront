@@ -1,9 +1,6 @@
 <template>
   <v-card class="mx-auto" max-width="344">
-    <v-img
-      :src="dish.picture"
-      height="200px"
-    ></v-img>
+    <v-img :src="dish.picture" height="200px"></v-img>
 
     <v-card-title> {{ dish.name }} </v-card-title>
 
@@ -13,22 +10,18 @@
       <v-btn color="orange lighten-2" text> RESERVE </v-btn>
 
       <v-spacer></v-spacer>
-
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
 export default {
-  watch: {
-  },
+  watch: {},
   name: "RestaurantPresentationCard",
   components: {},
-  props:['dish'],
+  props: ["dish"],
   data() {
-    return {
-      show: false,
-    };
+    return {};
   },
 };
 </script>   
