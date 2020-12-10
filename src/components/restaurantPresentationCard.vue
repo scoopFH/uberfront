@@ -1,10 +1,10 @@
 <template>
   <v-card class="mx-auto" max-width="344">
-    <v-img :src="dish.picture" height="200px"></v-img>
+    <v-img :src="restaurant.picture" height="200px"></v-img>
 
-    <v-card-title> {{ dish.name }} </v-card-title>
+    <v-card-title> {{ restaurant.name }} </v-card-title>
 
-    <v-card-subtitle> {{ dish.adress }} à {{ dish.city }} </v-card-subtitle>
+    <v-card-subtitle> {{ restaurant.adress }} à {{ restaurant.city }} </v-card-subtitle>
 
     <v-card-actions>
       <router-link to="{name:'dishesDisponibility', params:{category:'...'}},">
