@@ -10,7 +10,9 @@
     <v-card-subtitle> {{ dish.adress }} à {{ dish.city }} </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn color="orange lighten-2" text> RESERVE </v-btn>
+      <router-link to="{name:'dishesDisponibility', params:{category:'...'}},">
+        RESERVE
+      </router-link>
 
       <v-spacer></v-spacer>
 
