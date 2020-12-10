@@ -1,18 +1,18 @@
 <template>
   <div>
     <Reduction />
-    <restaurantPresentation />
+    <RestaurantPresentationList />
   </div>
 </template>
 
 <script>
 import Reduction from "@/components/reduction.vue";
-import restaurantPresentation from "@/components/restaurantPresentation";
+import RestaurantPresentationList from "@/components/restaurantPresentationList.vue";
 export default {
   name: "Home",
   components: {
     Reduction,
-    restaurantPresentation,
+    RestaurantPresentationList,
   },
 };
 </script>

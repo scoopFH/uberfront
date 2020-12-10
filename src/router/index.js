@@ -9,11 +9,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component:()=>import('../views/Home.vue')
-  },
-  {
-    path: '/dishesRestaurant',
-    name: 'dishesDisponibility',
-    component:()=>import('../views/dishesDisponibility')
   }
 ]
 
